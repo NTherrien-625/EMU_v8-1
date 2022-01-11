@@ -11,8 +11,7 @@ Table of Contents:
     5c. Jump/Conditional Instructions
 6. Writing your first program!
 
-============
-| Overview |
+Overview
 ============
 
 The EMU-8v1 arcitecture is an 8-bit, purely EMUlated (I know, very funny), architecture. EMU and its 
@@ -20,8 +19,7 @@ iterations have been in development since December 2021 by github user me, NTher
 as a personal project demonstrating my knowledge of computer organization, and will contiune to grow
 with my education. Maybe there will be an EMU operation system is in the future?
 
-=============
-| Registers |
+Registers
 =============
 
 EMU-8v1 has four, 8-bit registers, one 16-bit register, and a flags register.
@@ -42,8 +40,7 @@ flag is toggled high when the result of a computation is negative, and toggled l
 computation is 0 or positive. These flags can ONLY be changed by operations, there are no dedicated set
 and clear instructions.
 
-=======
-| ALU |
+ALU
 =======
 
 The ALU, the key to it all! EMU-8v1 uses an 8-bit ALU with 8 operations, all of which will set/clear the flags.
@@ -51,8 +48,7 @@ Additionally, each ALU operation translates to an assembly instruction (which wi
 The 8 ALU operations are addition, subtraction, bitwise and, bitwise or, bitwise not, bitwise xor, logical shift left, 
 and logical shift right.
 
-======================
-| Instruction Format |
+Instruction Format
 ======================
 
 The EMU-8v1 architecture uses a constant, 16-bit instruction size. The instructions are broken up into 4 blocks.
@@ -95,8 +91,7 @@ Block 4 is an 8-bit value that can be interpreted in 2 different ways, which is 
 mode are in EMU-8v1. In immediate mode, block 4 will store the 8 bit value being used in the operation. In register
 mode, block 4 will store the register that stores the data for the operation.
 
-================
-| Instructions |
+Instructions
 ================
 
 A majority of instructions use operand8 in thme, which can mean one of two things depending on the context, determined
@@ -239,8 +234,7 @@ based on the flags condition.
     Flags set:          Zero [Y]
                         Sign [Y]
 
-===============================
-| Writing your first program! |
+Writing your first program!
 ===============================
 
 Step 1:
@@ -255,18 +249,18 @@ Save the file as "main.emu". When the assembler runs it will look for a file nam
 Step 3:
 Run the assembler with the command
 
-    "python3 ./assembler.py"
+    python3 ./assembler.py
 
 in the same place you have the emulator and main.emu saved.
 
 Step 4:
 Compile the emulator with the command
 
-    "make cpuTester"
+    make cpuTester
 
 Step 5:
 Run your program with the command 
 
-    "./cpuTester"
+    ./cpuTester
 
 the cpu will run on its own and stop when there is no more code to run. Look for the 5 in R1!
